@@ -94,18 +94,26 @@
 }
 
 .login-form-group {
-  color: #ffffff;
   display: flex;
   align-items: center;
+  color: #ffffff;
+  background-color: #ffffff;
+  border: 1px solid #f2f1f1;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 13px 16px 14px 16px;
+  margin: 12px 0;
+}
+
+.login-form-group-checkbox {
+  background-color: initial;
+  border: initial;
+  padding: 0;
 }
 
 .login-form-control {
   width: 100%;
-  border: 1px solid #f2f1f1;
-  border-radius: 5px;
-  box-sizing: border-box;
-  padding: 13px 0 14px 18px;
-  margin: 12px 0;
+  border: 0;
   outline: none;
 }
 

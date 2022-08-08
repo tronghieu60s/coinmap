@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import show from "../../assets/icons/show.svg";
+import hidden from "../../assets/icons/hidden.svg";
 import { LoginType } from "../../core/types";
 import Success from "./Success";
 
@@ -11,6 +13,8 @@ type Props = {
 
 export default function Login(props: Props) {
   const { login, input, onChange, onSubmit } = props;
+
+  const [showPassword, setShowPassword] = useState(false);
 
   if (login) {
     return (
@@ -39,7 +43,7 @@ export default function Login(props: Props) {
         </div>
         <div className="login-form-group">
           <input
-            type="password"
+            type={showPassword ? "text" : "password"}
             className="login-form-control"
             placeholder="Password"
             name="password"
@@ -48,9 +52,14 @@ export default function Login(props: Props) {
             minLength={6}
             required
           />
+          <img
+            src={!showPassword ? show : hidden}
+            alt="show"
+            onClick={() => setShowPassword((prev) => !prev)}
+          />
         </div>
         <div className="login-text">
-          <div className="login-form-group">
+          <div className="login-form-group login-form-group-checkbox">
             <input
               type="checkbox"
               className="login-form-control login-checkbox"
