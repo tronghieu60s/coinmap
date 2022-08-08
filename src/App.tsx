@@ -1,6 +1,6 @@
 import "./App.css";
-import Layout from "./components/Layout";
-import Login from "./containers/Login";
+import Layout from "./main/components/Layout";
+import Login from "./main/containers/Login";
 
 function App() {
   return (

@@ -1,25 +1,52 @@
 import React from "react";
+import { LoginType } from "../../core/types";
 import Success from "./Success";
 
-export default function Login() {
+type Props = {
+  login: LoginType | null;
+  input: LoginType;
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
+  onSubmit: React.FormEventHandler<HTMLFormElement>;
+};
+
+export default function Login(props: Props) {
+  const { login, input, onChange, onSubmit } = props;
+
+  if (login) {
+    return (
+      <div className="login">
+        <div className="login-bg"></div>
+        <Success />
+      </div>
+    );
+  }
+
   return (
     <div className="login">
-      <Success />
       <div className="login-bg"></div>
       <h2 className="login-title">Login</h2>
-      <form className="login-form">
+      <form className="login-form" onSubmit={onSubmit}>
         <div className="login-form-group">
           <input
             type="text"
             className="login-form-control"
             placeholder="Email"
+            name="email"
+            value={input.email}
+            onChange={onChange}
+            required
           />
         </div>
         <div className="login-form-group">
           <input
-            type="text"
+            type="password"
             className="login-form-control"
             placeholder="Password"
+            name="password"
+            value={input.password}
+            onChange={onChange}
+            minLength={6}
+            required
           />
         </div>
         <div className="login-text">
@@ -27,6 +54,9 @@ export default function Login() {
             <input
               type="checkbox"
               className="login-form-control login-checkbox"
+              name="remember"
+              value={input.remember ? "true" : "false"}
+              onChange={onChange}
             />
             Remember Me
           </div>

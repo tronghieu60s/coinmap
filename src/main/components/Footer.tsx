@@ -1,8 +1,8 @@
-import facebook from "../assets/images/facebook.png";
-import logo from "../assets/images/logo.png";
-import telegram from "../assets/images/telegram.png";
-import twitter from "../assets/images/twitter.png";
-import youtube from "../assets/images/youtube.png";
+import facebook from "../../assets/images/facebook.png";
+import logo from "../../assets/images/logo.png";
+import telegram from "../../assets/images/telegram.png";
+import twitter from "../../assets/images/twitter.png";
+import youtube from "../../assets/images/youtube.png";
 
 export default function Footer() {
   return (
