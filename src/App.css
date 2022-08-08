@@ -1,38 +1,204 @@
-.App {
-  text-align: center;
+.app {
+  font-family: "Archivo";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  background-color: #1d2842;
+  padding: 18px 12px;
+}
+
+.footer {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  background-color: #0c122a;
+  padding: 40px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.footer-logo {
+  width: 244px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer-content {
+  color: #616887;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.footer-icons {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  margin-top: 48px;
+}
+
+.footer-icons li {
+  margin: 0 8px;
+}
+
+.footer-copyright {
+  color: #616887;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 32px;
+}
+
+.login {
+  position: relative;
+  background-image: url(./assets/images/background.png);
+  background-size: cover;
+  background-position: 50% 78%;
+  background-repeat: no-repeat;
+  padding: 40px 20px 48px 20px;
+}
+
+.login-bg {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(222, 39%, 19%, 96%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.login-title {
+  color: #ffffff;
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 30px;
+  margin: 0;
+  position: relative;
+  z-index: 20;
+}
+
+.login-form {
+  position: relative;
+  z-index: 20;
+}
+
+.login-form-group {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.login-form-control {
+  width: 100%;
+  border: 1px solid #f2f1f1;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 13px 0 14px 18px;
+  margin: 12px 0;
+  outline: none;
+}
+
+.login-form-control::placeholder {
+  color: #bfbfbf;
+}
+
+.login-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.login-checkbox {
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: 1px solid #f2f1f1;
+  border-radius: 4px;
+  margin: 0;
+  margin-right: 8px;
+}
+
+.login-forgot-text {
+  background: linear-gradient(90deg, #00bfe4 -0.01%, #00bfe4 43.5%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.login-button {
+  width: 100%;
+  color: #ffffff;
+  display: block;
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  background: linear-gradient(270deg, #5d3293 0%, #a23293 100%);
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
+  border: 0;
+  border-radius: 2px;
+  padding: 10px 0 5px 0;
+  margin-top: 56px;
+}
+
+.login-register-text {
+  color: #ffffff;
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  text-align: center;
+  margin-top: 48px;
+}
+
+.login-register-text a {
+  background: linear-gradient(90deg, #00bfe4 -0.01%, #00bfe4 43.5%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.success {
+  position: relative;
+  z-index: 20;
+}
+
+.success-title {
+  color: #ffffff;
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.success-title img {
+  margin-right: 8px;
+}
+
+.success-text {
+  color: #ffffff;
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  margin: 0;
+  margin-top: 15px;
 }
